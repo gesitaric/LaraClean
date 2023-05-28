@@ -2,7 +2,6 @@
 
 namespace packages\Domain\Application\User;
 
-use packages\Domain\Context\UserContextInterface;
 use packages\Domain\Domain\User\UserRepositoryInterface;
 use packages\UseCase\User\GetList\UserGetListUseCaseInterface;
 use packages\UseCase\User\GetList\UserGetListRequest;
@@ -20,7 +19,7 @@ class UserGetListInteractor implements UserGetListUseCaseInterface
      * UserCreateInteractor constructor.
      * @param UserRepositoryInterface $userRepository
      */
-    public function __construct(UserRepositoryInterface $userRepository, UserContextInterface $userContext)
+    public function __construct(UserRepositoryInterface $userRepository)
     {
         $this->userRepository = $userRepository;
     }
